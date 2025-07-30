@@ -12,3 +12,15 @@ Author: David Salac
 
 ## Note
 The algorithm runs for a while - couple of hours - depending on your computer.
+
+## Common Fixes
+The following fixes a classic error with the origin in the `torch` package.
+```python
+import torch
+#  keep the original loader
+_orig_load = torch.load
+def _safe_load(*args, **kw):
+    kw.setdefault("weights_only", False)   # force full un‑pickle
+    return _orig_load(*args, **kw)
+torch.load = _safe_load
+```
