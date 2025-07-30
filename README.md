@@ -24,3 +24,6 @@ def _safe_load(*args, **kw):
     return _orig_load(*args, **kw)
 torch.load = _safe_load
 ```
+
+## How to convert WAV to MP3 file
+Use an open-source software called **Shortcut**.

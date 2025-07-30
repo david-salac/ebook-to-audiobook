@@ -1,5 +1,5 @@
 # ----------------------------------
-# ==== THIS THING WORKS FINE!!! ====
+# ==== A simple Text To Speech (TTS) convertor usable for generating audiobooks ====
 # REQUIREMENTS: pip install kokoro torch torchaudio
 # INPUT ENVIRONMENTAL VARIABLES:
 #   a) PATH_TO_BOOK_TXT <=> PATH TO THE TXT FILE TO BE READ
@@ -40,4 +40,4 @@ combined = np.concatenate(audio_chunks, axis=0)
 
 # Save as WAV
 sf.write(PATH_TO_OUTPUT_WAV, combined, 24000)
-print("Saved synthesized speech to whatever.wav")
+print(f"Saved synthesized speech to {PATH_TO_OUTPUT_WAV}")
