@@ -19,8 +19,13 @@ with open(PATH_TO_BOOK_TXT, "r", encoding="utf‑8") as fp:
     content = fp.read()
     content = content.replace('’', r"'")
     content = content.replace('‘', r"'")
+    content = content.replace('“', r'"')
+    content = content.replace('”', r'"')
     content = content.replace('–', r" - ")
+    content = content.replace('—', r" - ")
+    content = content.replace('‑', r" - ")
     content = content.replace('/', r"; ")
+    content = content.replace(':', r". ")
     text = content.strip()
 
 # Initialize pipeline for American English ('a'), or e.g. 'b' for British English

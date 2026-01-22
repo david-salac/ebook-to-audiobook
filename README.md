@@ -4,11 +4,12 @@ A simple Text To Speech (TTS) convertor usable for generating audiobooks.
 Author: David Salac
 
 ## Usage
-1. Install all dependencies in `requirements.txt`.
-2. Set environmental variables:
+1. Note, that this script needs Linux-type environment (not Windows).
+2. Install all dependencies in `requirements.txt`.
+3. Set environmental variables:
    1. `PATH_TO_BOOK_TXT` <=> PATH TO THE TXT FILE TO BE READ
    2. `PATH_TO_OUTPUT_WAV` <=> PATH TO THE WAV THAT IS GENERATED
-3. Run `main.py`.
+4. Run `main.py`.
 
 ## Note
 The algorithm runs for a while - couple of hours - depending on your computer.
@@ -27,3 +28,24 @@ torch.load = _safe_load
 
 ## How to convert WAV to MP3 file
 Use an open-source software called **Shortcut**.
+
+## Create a Virtual Environment and requirements
+To create Virtual Environment withing Linux Bash (WSL/Ubuntu):
+```shell
+python -m venv venv
+```
+Then, to activate it:
+```shell
+source venv/bin/activate
+```
+Then, to install requirements:
+```shell
+pip install -r requirements.txt
+```
+
+## How to export Environment Variables in Ubuntu:
+If you want to export withing Linux Bash (WSL/Ubuntu):
+```shell
+export PATH_TO_BOOK_TXT=../PATH/WHEREVER
+export PATH_TO_OUTPUT_WAV=../PATH/WHENEVER
+```
